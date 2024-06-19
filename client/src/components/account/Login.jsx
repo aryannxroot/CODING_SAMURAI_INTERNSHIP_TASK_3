@@ -52,7 +52,16 @@ const Text = styled(Typography)`
     text-align : center;
 `
 
+const Error = styled(Typography)`
+    font-size : 10px;
+    color : #ff6161;
+`
 
+const signUpInitialValues = {
+    name : '',
+    username : '',
+    password : ''
+}
 
 const Login = () => {
     
@@ -60,6 +69,7 @@ const Login = () => {
 
 
     const [account,toggleAccount] = useState('login');
+    const [signup,setSignup] = useState(signUpInitialValues);
 
     const toggleSignUp = () => {
 
@@ -67,7 +77,8 @@ const Login = () => {
     }
 
     const onInputChange = (e) => {
-        console.log(e.target.name,e.target.value);
+        setSignup({...signup,[e.target.name]:e.target.value});
+
     }
 
 
