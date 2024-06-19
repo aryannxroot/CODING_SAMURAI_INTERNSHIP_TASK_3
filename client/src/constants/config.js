@@ -27,5 +27,6 @@ export const API_NOTIFICATION_MESSAGES = {
 //NEED SERVICE CALL: { url : '/', method : 'POST/GET/DELETE/PUT' , params : true/false, query : true/false  }
 
 export const SERVICE_URLS = {
-    userSignUp:{ url : '/signup', method : 'POST'}
+    userSignUp:{ url : '/signup', method : 'POST' },
+    userLogin:{ url : '/login', method : 'POST' }
 }

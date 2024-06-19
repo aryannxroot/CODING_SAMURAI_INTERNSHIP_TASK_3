@@ -4,10 +4,10 @@ import { API_NOTIFICATION_MESSAGES, SERVICE_URLS } from '../constants/config';
 const API_URL = 'http://localhost:8000';
 
 const axiosInstance = axios.create({
-    baseUrl: API_URL,
+    baseURL: API_URL,
     timeout : 10000,
     headers:{
-        "Content-Type":"application/json"
+        "content-type":"application/json"
     }
 })
 
@@ -60,7 +60,7 @@ const processError = (error) => {
     
     if(error.response) {
         //Request made but server responded with something other than 2.x.x
-        console,log('ERROR IN RESPONSE: ', error.toJSON());
+        console.log('ERROR IN RESPONSE: ', error.toJSON());
         return{
             isError : true,
             msg : API_NOTIFICATION_MESSAGES.responseFailure,
@@ -69,7 +69,7 @@ const processError = (error) => {
 
     }else if (error.request) {
         //Request made but no response was received (Front and backend connection problem)
-        console,log('ERROR IN REQUEST: ', error.toJSON());
+        console.log('ERROR IN REQUEST: ', error.toJSON());
         return{
             isError : true,
             msg : API_NOTIFICATION_MESSAGES.requestFailure,
@@ -78,7 +78,7 @@ const processError = (error) => {
  
     }else {
         //Something happened in setting up the request that triggered an error
-        console,log('ERROR IN NETWORK: ', error.toJSON());
+        console.log('ERROR IN NETWORK: ', error.toJSON());
         return{
             isError : true,
             msg : API_NOTIFICATION_MESSAGES.networkError,
@@ -88,32 +88,34 @@ const processError = (error) => {
     }
 }
 
-const API = {};
+const API = { };
 
 
-for (const [key , value] of Object.entries(SERVICE_URLS)) {
+for (const [key, value] of Object.entries(SERVICE_URLS)) {
 
-    API[key] = (body,showUploadProgress,showDownloadProgress) => 
+    API[key] = (body, showUploadProgress, showDownloadProgress) => {
 
-        axiosInstance({
+        console.log(`Making request to ${value.url} with method ${value.method} and body:`, body);
+        return axiosInstance({
             method : value.method,
             url :  value.url,
             data: body,
-            responseType : value.responseType,
-            onUploadProgress : function(progressEvent){
-                if(showUploadProgress) {
-                    let percentageCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total)
-                    showUploadProgress(percentageCompleted);
-                }
-            },
-            onDownloadProgress : function(progressEvent){
-                if(showDownloadProgress) {
-                    let percentageCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total)
-                    showDownloadProgress(percentageCompleted);
-                }
-            }
+            responseType : value.responseType
+            // onUploadProgress : function(progressEvent){
+            //     if(showUploadProgress) {
+            //         let percentageCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total)
+            //         showUploadProgress(percentageCompleted);
+            //     }
+            // },
+            // onDownloadProgress : function(progressEvent){
+            //     if(showDownloadProgress) {
+            //         let percentageCompleted = Math.round((progressEvent.loaded * 100) / progressEvent.total)
+            //         showDownloadProgress(percentageCompleted);
+            //     }
+            // }
         })
     }
+}
 
 
 export { API };

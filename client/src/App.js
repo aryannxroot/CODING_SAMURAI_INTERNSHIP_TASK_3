@@ -1,14 +1,29 @@
 // import logo from './logo.svg';
 import './App.css';
 
+import DataProvider from './context/DataProvider';
+
+import { BrowserRouter,Routes, Route } from 'react-router-dom';
+
 //components
 import Login from './components/account/Login';
+import Home from './components/home/Home';
+import Header from './components/header/Header';
+
 
 function App() {
   return (
-    <div style={{marginTop : '64px'}}>
-      <Login />
-    </div>
+    <DataProvider>
+      <BrowserRouter>
+        <Header />
+        <div style={{marginTop : '64px'}}>
+          <Routes>
+            <Route path = '/login' element = {<Login />} />
+            <Route path = '/' element = {<Home />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </DataProvider>
   );
 }
 
