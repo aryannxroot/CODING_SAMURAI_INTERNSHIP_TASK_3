@@ -52,10 +52,10 @@ const Text = styled(Typography)`
     text-align : center;
 `
 
-const Error = styled(Typography)`
-    font-size : 10px;
-    color : #ff6161;
-`
+// const Error = styled(Typography)`
+//     font-size : 10px;
+//     color : #ff6161;
+// `
 
 const signUpInitialValues = {
     name : '',
@@ -73,7 +73,7 @@ const Login = () => {
 
     const toggleSignUp = () => {
 
-        account == 'login' ? toggleAccount('signup') : toggleAccount('login');
+        account === 'login' ? toggleAccount('signup') : toggleAccount('login');
     }
 
     const onInputChange = (e) => {
