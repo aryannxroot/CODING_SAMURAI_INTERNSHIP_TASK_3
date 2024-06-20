@@ -35,7 +35,7 @@ Allows user to logout from the app.
 
 # Technologies Used
 
-- **Frontend**: HTML, CSS, JavaScript, React**
+- **Frontend**: HTML, CSS, JavaScript, React
 - **Backend** : Node.js, Express.js, MongoDB 
 - **Other Tools**: Git, GitHub
 - **UI-Framewrorks**: Material UI -> [website](https://mui.com).
