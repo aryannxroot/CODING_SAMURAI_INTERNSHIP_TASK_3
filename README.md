@@ -18,10 +18,12 @@ A welcoming homepage showcasing the latest articles and providing a brief introd
 
 #### 2. Navigation Menu
 Allows easy access to different sections like homepage, articles, about page, and contact page.
+![Navigation](/images/article.png).
 
 
 #### 3. About Page
 Introduces the author, their interests, and the purpose of the blog.
+![AboutPage](/images/about.png).
 
 #### 4. Contact Page
 Features a contact form enabling visitors to send messages or inquiries.
