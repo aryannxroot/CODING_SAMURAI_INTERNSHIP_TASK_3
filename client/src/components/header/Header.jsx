@@ -1,45 +1,37 @@
 
-import { AppBar, Toolbar, Typography, styled} from '@mui/material';
+import { AppBar, Toolbar, styled, Button } from '@mui/material'; 
 import { Link } from 'react-router-dom';
 
+import { useNavigate } from 'react-router-dom';
+
+
 const Component = styled(AppBar)`
-    background: #898888;
-    height : 64px;
-    color: #fff;
-`
+    background: #FFFFFF;
+    color: black;
+`;
 
 const Container = styled(Toolbar)`
-    display : flex;
-    align-items: center;
-    justify-content : center;
+    justify-content: center;
     & > a {
+        padding: 20px;
+        color: #000;
         text-decoration: none;
-        color: inherit;
-        padding: 10px 20px;
-        margin: auto 40px;
-        font-size: 20px;
-        font-weight: 600;
-        text-align: center;
-        border: none;
-        border-radius: 20px;
     }
-
-    & > a:hover {
-        cursor: pointer;
-        color: rgba(0, 0, 0, 0.87);
-        background-color: #f5f5f5 ;
-    }
-
 `
 
-const Header = () =>{
+const Header = () => {
+
+    const navigate = useNavigate();
+
+    const logout = async () => navigate('/account');
+        
     return (
-        <Component position = "static">
+        <Component>
             <Container>
-                <Link>Home</Link>
-                <Link>About</Link>
-                <Link>Contact</Link>
-                <Link>Logout</Link>
+                <Link to='/'>HOME</Link>
+                <Link to='/about'>ABOUT</Link>
+                <Link to='/contact'>CONTACT</Link>
+                <Link to='/account'>LOGOUT</Link>
             </Container>
         </Component>
     )
