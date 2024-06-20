@@ -27,23 +27,24 @@ const About = () => {
         <Box>
             <Banner/>
             <Wrapper>
-                <Typography variant="h3">Code for Interview</Typography>
-                <Text variant="h5">I'm a Software Engineer based in India. 
-                    I've built websites, desktop applications and corporate software.<br />
+                <Typography variant="h3">Aryan</Typography>
+                <Text variant="h5">I'm a Web Developer and Engineer based in India.
+                    I have passion for website design and customization. 
+                    I've built websites, desktop applications.<br />
                     If you are interested, you can view some of my favorite projects here
                     <Box component="span" style={{ marginLeft: 5 }}>
-                        <Link href="https://github.com/kunaltyagi9" color="inherit" target="_blank"><GitHub /></Link>
+                        <Link href="https://github.com/aryannxroot" color="inherit" target="_blank"><GitHub /></Link>
                     </Box>
                 </Text>
                 <Text variant="h5">
                     Need something built or simply want to have chat? Reach out to me on
                     <Box component="span" style={{ marginLeft: 5 }}>
-                        <Link href="https://www.instagram.com/codeforinterview/" color="inherit" target="_blank">
+                        <Link href="https://www.instagram.com/aryannxroot/" color="inherit" target="_blank">
                             <Instagram />
                         </Link>
                     </Box>  
                         or send me an Email 
-                        <Link href="mailto:codeforinterview@gmail.com?Subject=This is a subject" target="_blank" color="inherit">
+                        <Link href="mailto:ap2303898@gmail.com?Subject=This is a subject" target="_blank" color="inherit">
                             <Email />
                         </Link>.
                 </Text>
