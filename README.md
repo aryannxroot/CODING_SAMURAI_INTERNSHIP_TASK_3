@@ -50,17 +50,13 @@ Allows user to logout from the app.
    ```bash
    cd server
 
-3. **Install dependencies:**
+4. **Install dependencies:**
    ```bash
    npm i
 
-4. **run the server**
+5. **run the server**
    ```bash
    npm start
-
-3. **Change to the server folder:**
-   ```bash
-   cd server
 
 #### Open a new terminal :
 
