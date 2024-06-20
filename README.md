@@ -29,26 +29,31 @@ The Personal Blog Website project is aimed at creating a platform where users ca
 1. Clone the repository:
 
   ```bash 
+
    git clone https://github.com/aryannxroot/CODING_SAMURAI_INTERNSHIP_TASK_3.git
 
 2. Change to the project direectory:
 
     ```bash
+
     cd CODING_SAMURAI_INTERNSHIP_TASK_3
 
 3. Change to the server folder:
 
     ```bash
+
     cd server
 
 4. Install dependencies:
 
     ```bash
+
     npm i
 
 4. Start the server :
 
     ```bash
+
     npm start
 
  ***Open a New terminal***
@@ -56,16 +61,19 @@ The Personal Blog Website project is aimed at creating a platform where users ca
  5. Change to client directory
 
     ```bash
+
     cd client 
 
 6. Install dependencies:
 
     ```bash
+
     npm i
 
 7. Start the react app:
 
     ```bash
+    
     npm start
 
 Runs the app in the development mode.\
