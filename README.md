@@ -27,10 +27,11 @@ Introduces the author, their interests, and the purpose of the blog.
 
 #### 4. Contact Page
 Features a contact form enabling visitors to send messages or inquiries.
-![Contact](/images/)
+![Contact](/images/contact.png).
 
 #### 5. Logout
 Allows user to logout from the app.
+![Logout](/images/login.png).
 
 # Technologies Used
 
