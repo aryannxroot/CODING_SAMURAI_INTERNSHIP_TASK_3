@@ -14,9 +14,11 @@ The Personal Blog Website project is aimed at creating a platform where users ca
 
 #### 1. Homepage
 A welcoming homepage showcasing the latest articles and providing a brief introduction about the author.
+![HomePage](/images/home.png).
 
 #### 2. Navigation Menu
 Allows easy access to different sections like homepage, articles, about page, and contact page.
+
 
 #### 3. About Page
 Introduces the author, their interests, and the purpose of the blog.
