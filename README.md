@@ -58,6 +58,8 @@ Allows user to logout from the app.
    ```bash
    npm start
 
+   Runs the server on  [http://localhost:3000](http://localhost:3000) in the development mode.\
+
 #### Open a new terminal :
 
 1. **Change to the client folder:**
@@ -74,6 +76,8 @@ Allows user to logout from the app.
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
 
 
 ### Contribution
